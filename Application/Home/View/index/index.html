@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="../js/flexible.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+    </head>
+    <body>
+        <img src="../img/bg.png" alt="bg" id="bg">
+        <img src="../img/tuanSign.png" alt="tuanSign" id="tuanSign">
+        <img src="../img/activityMark.png" alt="activityMark" id="activityMark">
+        <div id="menu">
+        	<div class="box">
+        	    <div id="iSign" class="a">
+        		    <div class="b">我要点单</div>
+        		    <div class="c"></div>
+        	    </div>
+        	</div>
+        	<div class="box">
+        	    <div id="moreDet" class="a">
+        		    <div class="b">查看详情</div>
+        		    <div class="c"></div>
+        	    </div>
+        	</div>
+        </div>
+        <div id="foot">&#64;共青团重庆市委</div>
+        <script type="text/javascript">
+        	
+        	var iSign = document.querySelector("#iSign");
+        	var moreDet = document.querySelector("#moreDet");
+
+        	iSign.addEventListener('click', function () {
+        		window.location.href = "clickPage.html";
+        	});
+
+        	moreDet.addEventListener('click', function () {
+        		window.location.href = "more.html"
+        	});
+        </script>
+    </body>
+</html>

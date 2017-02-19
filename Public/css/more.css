@@ -1,0 +1,185 @@
+/*
+* @Author: 10261
+* @Date:   2017-02-19 02:58:59
+* @Last Modified by:   10261
+* @Last Modified time: 2017-02-19 16:34:11
+*/
+html. body. div, img {
+	margin: 0;
+	padding: 0;
+}
+#bigBg {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+}
+#morePrompt {
+	width: 100%;
+	height: 1.2rem;
+	line-height: 0.6rem;
+	font-weight: 900;
+	font-size: 0.45rem;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	margin-top: 0.6rem;
+	z-index: 3;
+	color: #723f2d;
+}
+#morePrompt span {
+	width: 100%;
+	display: inline-block;
+	height: 0.6rem;
+}
+#headName {
+	width: 100%;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 0.45rem;
+	font-weight: 700;
+	z-index: 3;
+	position: relative;
+	margin-top: 0.6rem;
+	color: #723f2d;
+}
+.headPost {
+	width: 50%;
+	float: left;
+	position: relative;
+	height: 0.8rem;
+}
+#moreBox {
+	width: 100%;
+	position: relative;
+	z-index: 3;
+}
+.postClass {
+	width: 100%;
+	height: 0.875rem;
+	position: relative;
+	margin-top: 0.05rem;
+	line-height: 0.875rem;
+	color: #723f2d;
+	font-size: 0.4rem;
+	vertical-align: middle;
+	background: #fff6ba;
+}
+.post {
+	width: 50%;
+	height: 0.875rem;
+	text-align: left;
+	position: relative;
+	margin-left: 5%;
+	float: left;
+}
+.postNum {
+	width: 40%;
+	height: 0.875rem;
+	text-align: center;
+	position: relative;
+	margin-left: 5%;
+	float: left;
+}
+#back {
+	width: 4rem;
+	height: 1rem;
+	margin-top: 0.2rem;
+	position: absolute;
+	bottom: -1.3rem;
+	left: 3rem;
+	border-radius: 0.5rem;
+	font-size: 0.5rem;
+	line-height: 1rem;
+	vertical-align: middle;
+	color: #fff;
+	background: #fa7851;
+	text-align: center;
+	box-shadow: 0 5px #dd7327;
+	transition: box-shadow 0.5s;
+}
+#back:active {
+	box-shadow: none;
+}
+#foot {
+	position: absolute;
+	bottom: -2.4rem;
+	left: 0;
+	width: 100%;
+	height: 1rem;
+	font-size: 0.4rem;
+	line-height: 1rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #723f2d;
+	z-index: 6;
+}
+
+#alertBox {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+	z-index: 10;
+	color: #fff;
+}
+#meng {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	background: #000;
+	opacity: 0.5;
+}
+#yourDet {
+	width: 6.4rem;
+	position: relative;
+	z-index: 12;
+	margin-top: 1.5rem;
+	margin-left: 1.8rem;
+	background: #ffffd9;
+	color: #723f2d;
+	border-radius: 0.5rem;
+}
+#close {
+	width: 0.8rem;
+	height: 0.8rem;
+	position: absolute;
+	right: -0.4rem;
+	top: -0.4rem;
+}
+#yourPrompt {
+	width: 100%;
+	height: 1.3rem;
+	position: relative;
+	font-size: 0.4rem;
+	font-weight: 700;
+	text-align: center;
+	line-height: 1.3rem;
+	vertical-align: middle;
+}
+#yourList {
+	position: relative;
+	margin-top: 0.1rem;
+	margin-left: 0.4rem;
+	margin-right: 0.4rem;
+	padding-bottom: 0.5rem;
+	line-height: 0.5rem;
+	font-size: 0.35rem;
+	vertical-align: middle;
+}
+#yourList span {
+	font-weight: 700;
+	font-size: 0.4rem;
+}
+.list {
+	margin-top: 0.2rem;
+}

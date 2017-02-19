@@ -1,0 +1,385 @@
+/*
+* @Author: 10261
+* @Date:   2017-02-18 22:22:47
+* @Last Modified by:   10261
+* @Last Modified time: 2017-02-19 15:32:25
+*/
+html, body, div, img, span, p,input {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #fede7c;
+}
+input[type=checkbox] {
+	visibility: hidden;
+}
+#mustBox {
+	width: 100%;
+	height: 5.2rem;
+	position: relative;
+}
+#mustBox img {
+	width: 9.4rem;
+	height: 5.2rem;
+	position: absolute;
+	top: 0;
+	left: 0.3rem;
+}
+#clickBox {
+	position: relative;
+	width: 100%;
+	line-height: 0.875rem;
+	color: #723f2d;
+	font-weight: 700;
+	font-size: 0.35rem;
+	vertical-align: middle;
+	text-align: center;
+}
+#clickListHead {
+	width: 100%;
+	height: 0.875rem;
+	position: relative;
+	font-size: 0.4rem;
+}
+#clickHead {
+	width: 100%;
+	height: 0.875rem;
+	position: relative;
+	margin-top: 0.2rem;
+}
+.clickNum {
+	width: 1.4rem;
+	height: 0.875rem;
+	position: relative;
+	float: left;
+}
+.clickProject {
+	width: 7rem;
+	height: 0.875rem;
+	position: relative;
+	float: left;
+}
+.clickJoin {
+	width: 1.6rem;
+	height: 0.875rem;
+	position: relative;
+	float: left;
+}
+.clickClass {
+	width: 100%;
+	position: relative;
+}
+.projectName {
+	width: 100%;
+	position: relative;
+	height: 0.875rem;
+	background: #fff6ba;
+}
+.checkBoxA {
+	width: 0.5rem;
+	height: 0.5rem;
+	position: relative;
+	margin-top: 0.1575rem;
+	margin-left: 0.55rem;
+}
+.checkBoxA label {
+	cursor: pointer;
+	position: absolute;
+	width: 0.5rem;
+	height: 0.5rem;
+	top: 0;
+	left: 0;
+	border: 2px solid #fa7851;
+}
+.checkBoxA label::after {
+	content: '';
+	position: absolute;
+	opacity: 0;
+	width: 0.3rem;
+    height: 0.2rem;
+    background: transparent;
+    left: 0.1rem;
+    top: 0.1rem;
+    border: 2px solid #fa7851;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.checkBoxA input[type=checkbox]:checked + label:after{
+	opacity: 1;
+}
+
+
+.projectDetBox {
+	width: 100%;
+	position: relative;
+	margin: 0;
+	transition: height 0.5s;
+}
+.projectDet {
+	width: 90%;
+	height: 1.8rem;
+	font-weight: 400;
+	text-align: left;
+	position: relative;
+	overflow: hidden;
+	margin-top: 0.1rem;
+	margin-bottom: 0.6rem;
+	margin-left: 5%;
+	transition: height 0.5s;
+	font-size: 0.5rem;
+	line-height: 0.6rem;
+	text-overflow: ellipsis;
+}
+.projectDet span {
+	font-weight: 700;
+	font-size: 0.45rem;
+	display: inline-block;
+	line-height: 0.6rem;
+}
+.projectDet p {
+	font-size: 0.5rem;
+	line-height: 0.6rem;
+	text-overflow: ellipsis;
+}
+.more {
+	position: absolute;
+	bottom: -0.5rem;
+	right: 0.3rem;
+	font-size: 0.25rem;
+	font-weight: 400;
+	line-height: 0.5rem;
+	width: 1.6rem;
+	height: 0.5rem;
+	color: #fb935c;
+	vertical-align: middle;
+}
+#clickYes {
+	width: 4rem;
+	height: 1rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 5px #dc6d16;
+	background: #fa7851;
+	color: #fff;
+	font-size: 0.5rem;
+	position: relative;
+	margin-left: 3rem;
+	margin-top: 0.4rem;
+	transition: box-shadow 0.5s;
+}
+#clickYes:active {
+	box-shadow: none;
+}
+
+
+
+#confirmBox {
+	width: 10rem;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 5;
+}
+#bigBg {
+	width: 10rem;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 6;
+}
+#prompt {
+	width: 100%;
+	height: 0.7rem;
+	position: absolute;
+	top: 2rem;
+	left: 0;
+	font-weight: 700;
+	font-size: 0.5rem;
+	text-align: center;
+	line-height: 0.7rem;
+	vertical-align: middle;
+	color: #723f2d;
+	z-index: 7;
+}
+#allInput {
+	width: 100%;
+	height: 5.2rem;
+	position: absolute;
+	top: 3rem;
+	left: 0;
+	z-index: 7;
+}
+.inputBox {
+	width: 7.8rem;
+	height: 1rem;
+	position: relative;
+	margin-top: 0.15rem;
+	margin-bottom: 0.15rem;
+	margin-left: 1.1rem;
+}
+.inputName {
+	width: 1.5rem;
+	height: 1rem;
+	float: left;
+	position: relative;
+	font-weight: 700;
+	font-size: 0.5rem;
+	line-height: 1rem;
+	vertical-align: middle;
+	color: #723f2d;
+	text-align: center;
+}
+.inputDet {
+	width: 6.3rem;
+	height: 1rem;
+	border-radius: 0.5rem;
+	float: left;
+	background: #ffffd9;
+	position: relative;
+}
+.myIput {
+	border: none;
+	outline: none;
+	background: #ffffd9;
+	height: 0.8rem;
+	width: 5rem;
+	position: relative;
+	margin-top: 0.1rem;
+	margin-left: 0.5rem;
+}
+#lastConfirm {
+	width: 100%;
+	height: 1rem;
+	position: absolute;
+	text-align: center;
+	line-height: 1rem;
+	vertical-align: middle;
+	top: 8.2rem;
+	left: 0;
+	z-index: 7;
+}
+#back {
+	width: 4rem;
+	height: 1rem;
+	position: absolute;
+	left: 0.5rem;
+	top: 0;
+	border-radius: 0.5rem;
+	box-shadow: 0 5px #dc6d16;
+	background: #e78669;
+	color: #fff;
+	font-size: 0.5rem;
+	transition: box-shadow 0.5s;
+}
+#back:active {
+	box-shadow: none;
+}
+#confirmYes {
+	width: 4rem;
+	height: 1rem;
+	position: absolute;
+	left: 5.5rem;
+	top: 0;
+	border-radius: 0.5rem;
+	box-shadow: 0 5px #dc6d16;
+	background: #fa7851;
+	color: #fff;
+	font-size: 0.5rem;
+	transition: box-shadow 0.5s;
+}
+#confirmYes:active {
+	box-shadow: none;
+}
+
+
+#alertBox {
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	color: #fff;
+}
+#meng {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	background: #000;
+	opacity: 0.5;
+}
+#alert {
+	width: 6.4rem;
+	height: 6.25rem;
+	position: absolute;
+	z-index: 12;
+	top: 4.2rem;
+	left: 1.8rem;
+	border-radius: 0.5rem;
+	background: #ffffd9;
+	text-align: center;
+}
+#stateImg {
+	width: 2.8rem;
+	height: 2rem;
+	position: relative;
+	margin-top: 1rem;
+}
+#stateDet {
+	width: 100%;
+	height: 1.6rem;
+	line-height: 0.8rem;
+	vertical-align: middle;
+	font-weight: 700;
+	font-size: 0.4rem;
+	color: #723f2d;
+}
+#stateDet span {
+	width: 100%;
+	height: 0.8rem;
+	display: inline-block;
+}
+#stateYes {
+	width: 4rem;
+	height: 1rem;
+	border-radius: 0.5rem;
+	font-size: 0.5rem;
+	line-height: 1rem;
+	vertical-align: middle;
+	color: #fff;
+	background: #fa7851;
+	box-shadow: 0 5px #dd7327;
+	position: relative;
+	margin-left: 1.2rem;
+	margin-top: 0.15rem;
+	transition: box-shadow 0.5s;
+}
+#stateYes:active {
+	box-shadow: none;
+}
+
+#foot {
+	position: absolute;
+	left: 0;
+	bottom: -1rem;
+	width: 100%;
+	height: 1rem;
+	font-size: 0.4rem;
+	line-height: 1rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #723f2d;
+	z-index: 6;
+}
