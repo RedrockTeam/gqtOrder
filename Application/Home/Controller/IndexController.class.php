@@ -54,7 +54,7 @@ class IndexController extends Controller {
                 )
             );
         }
-
+        header('Access-Control-Allow-Origin:*');
         $this->ajaxReturn(
             array(
                 'status' => 200,
@@ -72,6 +72,7 @@ class IndexController extends Controller {
         foreach ($data as &$v) {
             $v['select'] = json_decode($v['select']);
         }
+        header('Access-Control-Allow-Origin:*');
         $this->ajaxReturn(
             array(
                 'status' => 200,
