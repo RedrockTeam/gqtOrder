@@ -72,6 +72,7 @@ function getInfo () {
 				addPost(data[i]);
 				showDet();
 			}
+			console.log(data.length);
 			length.current += data.length;
 		},
 		error: function (data) {
