@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:23:08
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 19:55:17
+* @Last Modified time: 2017-02-19 21:27:43
 */
 
 'use strict';
@@ -47,21 +47,21 @@ function alertYou (state) {
 		case 1: {
 			stateImg.src = publicPath + "/img/wrong.png";
 			lineOne.innerHTML = "对不起";
-			lineTwo.innerHTML = "您还未进行勾选";
+			lineTwo.innerHTML = "您还未进行勾选。";
 			flag = 0;
 			break;
 		}
 		case 2: {
 			stateImg.src = publicPath + "/img/wrong.png";
 			lineOne.innerHTML = "住手";
-			lineTwo.innerHTML = "您已经选满3项了";
+			lineTwo.innerHTML = "您已经选满3项了。";
 			flag = 0;
 			break;
 		}
 		case 3: {
 			stateImg.src = publicPath + "/img/wrong.png";
-			lineOne.innerHTML = "";
-			lineTwo.innerHTML = "亲，信息不能为空哟~";
+			lineOne.innerHTML = "温馨提示：";
+			lineTwo.innerHTML = "亲，信息不能为空哟~。";
 			flag = 0;
 			break;
 		}
@@ -75,7 +75,7 @@ function alertYou (state) {
 		case 5: {
 			stateImg.src = publicPath + "/img/wrong.png";
 			lineOne.innerHTML = "对不起";
-			lineTwo.innerHTML = "请检查一下您的个人信息是否正确";
+			lineTwo.innerHTML = "请检查一下您的个人信息是否正确。";
 			flag = 0;
 			break;
 		}

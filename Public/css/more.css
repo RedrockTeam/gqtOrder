@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-19 02:58:59
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 19:18:58
+* @Last Modified time: 2017-02-19 21:11:25
 */
 html. body. div, img {
 	margin: 0;
@@ -88,10 +88,10 @@ html. body. div, img {
 #back {
 	width: 4rem;
 	height: 1rem;
+	position: relative;
 	margin-top: 0.2rem;
-	position: absolute;
-	bottom: -1.3rem;
-	left: 3rem;
+	margin-bottom: 0.2rem;
+	margin-left: 3rem;
 	border-radius: 0.5rem;
 	font-size: 0.5rem;
 	line-height: 1rem;
@@ -101,14 +101,14 @@ html. body. div, img {
 	text-align: center;
 	box-shadow: 0 5px #dd7327;
 	transition: box-shadow 0.5s;
+	z-index: 7;
 }
 #back:active {
 	box-shadow: none;
 }
 #foot {
-	position: absolute;
-	bottom: -2.4rem;
-	left: 0;
+	position: relative;
+	margin-bottom: 0.2rem;
 	width: 100%;
 	height: 1rem;
 	font-size: 0.4rem;

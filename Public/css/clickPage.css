@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:22:47
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 19:19:00
+* @Last Modified time: 2017-02-19 20:55:44
 */
 html, body, div, img, span, p,input {
 	margin: 0;
@@ -132,13 +132,13 @@ input[type=checkbox] {
 	margin-bottom: 0.6rem;
 	margin-left: 5%;
 	transition: height 0.5s;
-	font-size: 0.5rem;
+	font-size: 0.35rem;
 	line-height: 0.6rem;
 	text-overflow: ellipsis;
 }
 .projectDet span {
 	font-weight: 700;
-	font-size: 0.45rem;
+	font-size: 0.35rem;
 	display: inline-block;
 	line-height: 0.6rem;
 }
