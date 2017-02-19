@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:23:08
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 23:13:51
+* @Last Modified time: 2017-02-19 23:25:48
 */
 
 'use strict';
@@ -47,6 +47,8 @@ function alertYou (state) {
 	switch (state) {
 		case 1: {
 			stateImg.src = publicPath + "/img/wrong.png";
+			mark(".lineOne").style.display = "block";
+			mark(".lineTwo").style.marginTop = "0";
 			lineOne.innerHTML = "对不起";
 			lineTwo.innerHTML = "您还未进行勾选";
 			flag = 0;
@@ -55,13 +57,16 @@ function alertYou (state) {
 		case 2: {
 			stateImg.src = publicPath + "/img/wrong.png";
 			lineOne.innerHTML = "住手";
+			mark(".lineOne").style.display = "block";
+			mark(".lineTwo").style.marginTop = "0";
 			lineTwo.innerHTML = "您已经选满3项了";
 			flag = 0;
 			break;
 		}
 		case 3: {
 			stateImg.src = publicPath + "/img/wrong.png";
-			lineOne.innerHTML = "温馨提示:";
+			mark(".lineOne").style.display = "none";
+			mark(".lineTwo").style.marginTop = "0.3rem";
 			lineTwo.innerHTML = "亲，信息不能为空哟~";
 			flag = 0;
 			break;
@@ -69,6 +74,8 @@ function alertYou (state) {
 		case 4: {
 			stateImg.src = publicPath + "/img/success.png";
 			lineOne.innerHTML = "点单成功！";
+			mark(".lineOne").style.display = "block";
+			mark(".lineTwo").style.marginTop = "0";
 			lineTwo.innerHTML = "撸起袖子加油干吧！";
 			flag = 1;
 			break;
@@ -76,6 +83,8 @@ function alertYou (state) {
 		case 5: {
 			stateImg.src = publicPath + "/img/wrong.png";
 			lineOne.innerHTML = "对不起";
+			mark(".lineOne").style.display = "block";
+			mark(".lineTwo").style.marginTop = "0";
 			lineTwo.innerHTML = "请检查一下您的个人信息是否正确";
 			flag = 0;
 			break;
