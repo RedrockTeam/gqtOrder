@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:23:08
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 22:31:08
+* @Last Modified time: 2017-02-19 23:13:51
 */
 
 'use strict';
@@ -92,14 +92,30 @@ function judge () {
 	var checkAll = $$("input[type=checkbox]");
 	for (var i = 0; i <checkBoxAll.length; i ++) {
 		(function (j) {
+			var count = 0;
+			var xFlag = 0;
 			checkBoxAll[j].addEventListener('click', function () {
-				checkCount++;
-				console.log(checkCount);
-				if (checkCount == 8) {
-					alertYou(2);
-					checkCount = 6;
-					checkAll[j].checked = false;
+				console.log(checkAll[j].checked);
+				if (checkAll[j].checked == false) {
+					count--;
+				} else {
+				    count++;
+				    if (xFlag == 1) {
+				    	checkAll[j].checked = false;
+				    	xFlag = 0;
+				    }
 				}
+				if (count == -1) {
+					checkCount++;
+					if (checkCount == 4) {
+						alertYou(2);
+						checkCount = 3;
+						xFlag = 1;
+					}
+				} else if (count == 1) {
+					checkCount--;
+				}
+				console.log(xFlag);
 			});
 		})(i);
 	}
