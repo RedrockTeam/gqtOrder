@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:22:47
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 21:37:59
+* @Last Modified time: 2017-02-19 22:52:51
 */
 html, body, div, img, span, p,input {
 	margin: 0;
@@ -170,7 +170,7 @@ input[type=checkbox] {
 	position: relative;
 	margin-left: 3rem;
 	margin-top: 0.4rem;
-	margin-bottom: 0.5rem;s
+	margin-bottom: 0.5rem;
 	transition: box-shadow 0.5s;
 }
 #clickYes:active {
@@ -341,16 +341,18 @@ input[type=checkbox] {
 }
 #stateDet {
 	width: 100%;
-	height: 1.6rem;
-	line-height: 0.8rem;
+	height: 1.2rem;
+	line-height: 0.6rem;
 	vertical-align: middle;
 	font-weight: 700;
+	position: relative;
+	margin-top: 0.2rem;
 	font-size: 0.4rem;
 	color: #723f2d;
 }
 #stateDet span {
 	width: 100%;
-	height: 0.8rem;
+	height: 0.6rem;
 	display: inline-block;
 }
 #stateYes {
@@ -365,7 +367,7 @@ input[type=checkbox] {
 	box-shadow: 0 5px #dd7327;
 	position: relative;
 	margin-left: 1.2rem;
-	margin-top: 0.15rem;
+	margin-top: 0.3rem;
 	transition: box-shadow 0.5s;
 }
 #stateYes:active {
