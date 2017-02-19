@@ -43,7 +43,7 @@ class IndexController extends Controller {
             || $name == ''
             || !is_array($select)
             || count($select) > 3
-            || count($select) < 3) {
+            || count($select) == 0) {
             $this->ajaxReturn(
                 array(
                     'status' => 400,
