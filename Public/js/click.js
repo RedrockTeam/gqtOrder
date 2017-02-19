@@ -45,28 +45,28 @@ function alertYou (state) {
 
 	switch (state) {
 		case 1: {
-			stateImg.src = "../img/wrong.png";
+			stateImg.src = publicPath + "/img/wrong.png";
 			lineOne.innerHTML = "对不起";
 			lineTwo.innerHTML = "您还未选满3项";
 			flag = 0;
 			break;
 		}
 		case 2: {
-			stateImg.src = "../img/wrong.png";
+			stateImg.src = publicPath + "/img/wrong.png";
 			lineOne.innerHTML = "住手";
 			lineTwo.innerHTML = "您已经选满3项了";
 			flag = 0;
 			break;
 		}
 		case 3: {
-			stateImg.src = "../img/wrong.png";
+			stateImg.src = publicPath + "/img/wrong.png";
 			lineOne.innerHTML = "";
 			lineTwo.innerHTML = "亲，信息不能为空哟~";
 			flag = 0;
 			break;
 		}
 		case 4: {
-			stateImg.src = "../img/success.png";
+			stateImg.src = publicPath + "/img/success.png";
 			lineOne.innerHTML = "点单成功！";
 			lineTwo.innerHTML = "撸起袖子加油干吧！";
 			flag = 1;
@@ -171,7 +171,7 @@ function start () {
 		if (!flag) {
 			mark("#alertBox").style.display = "none";
 		} else {
-			window.location.href = "../html/index.html";
+			window.location.href = morePath;
 		}
 	});
 

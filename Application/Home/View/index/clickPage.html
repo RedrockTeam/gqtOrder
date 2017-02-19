@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <script type="text/javascript" src="../js/flexible.js"></script>
-        <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="../css/clickPage.css">
+        <script type="text/javascript" src="__PUBLIC__/js/flexible.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/clickPage.css">
     </head>
     <body>
         <div id="mustBox">
-        	<img src="../img/mustKnow.png">
+        	<img src="__PUBLIC__/img/mustKnow.png">
         </div>
         <div id="clickBox">
         	<div id="clickListHead">2017重庆共青团改革重点项目清单</div>
@@ -363,7 +363,7 @@
         	<div id="foot">&#64;共青团重庆市委</div>
         </div>
         <div id="confirmBox">
-            <img src="../img/bigBg.png" id="bigBg">
+            <img src="__PUBLIC__/img/bigBg.png" id="bigBg">
         	<div id="prompt">请完善以下信息并提交</div>
         	<div id="allInput">
         		<div class="inputBox">
@@ -399,7 +399,7 @@
         <div id="alertBox">
             <div id="meng"></div>
         	<div id="alert">
-        		<img src="../img/wrong.png" id="stateImg">
+        		<img src="__PUBLIC__/img/wrong.png" id="stateImg">
         		<div id="stateDet">
         			<span class="lineOne">点单成功</span>
         			<span class="lineTwo">撸起袖子加油干吧！</span>
@@ -407,6 +407,12 @@
         		<div id="stateYes">确定</div>
         	</div>
         </div>
-    <script type="text/javascript" src="../js/click.js"></script>
+		<script>
+			var indexPath = "{:U('Index/index')}";
+        	var clickPath = "{:U('Index/clickPage')}";
+        	var morePath = "{:U('Index/more')}";
+        	var publicPath = "__PUBLIC__";
+		</script>
+    	<script type="text/javascript" src="__PUBLIC__/js/click.js"></script>
     </body>
 </html>

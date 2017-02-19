@@ -2,16 +2,16 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <script src="../js/flexible.js"></script>
-        <script src="../js/ajax.js"></script>
-        <link rel="stylesheet" type="text/css" href="../css/more.css">
+        <script src="__PUBLIC__/js/flexible.js"></script>
+        <script src="__PUBLIC__/js/ajax.js"></script>
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/more.css">
     </head>
     <body>
-        <img src="../img/bigBg.png" id="bigBg">
+        <img src="__PUBLIC__/img/bigBg.png" id="bigBg">
         <div id="alertBox">
             <div id="meng"></div>
             <div id="yourDet">
-                <img src="../img/close.png" id="close">
+                <img src="__PUBLIC__/img/close.png" id="close">
                 <div id="yourPrompt">该单位的点单为以下内容</div>
                 <div id="yourList"></div>
             </div>
@@ -28,6 +28,13 @@
             <div id="back">返回</div>
         	<div id="foot">&#64;共青团重庆市委</div>
         </div>
-    <script src="../js/more.js"></script>
+    <script src="__PUBLIC__/js/more.js"></script>
     </body>
+    <script>
+        var indexPath = "{:U('Index/index')}";
+        var clickPath = "{:U('Index/clickPage')}";
+        var morePath = "{:U('Index/more')}";
+        var publicPath = "__PUBLIC__";
+
+    </script>
 </html>

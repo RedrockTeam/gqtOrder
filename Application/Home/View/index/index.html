@@ -2,13 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <script type="text/javascript" src="../js/flexible.js"></script>
-        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <script type="text/javascript" src="__PUBLIC__/js/flexible.js"></script>
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css">
     </head>
     <body>
-        <img src="../img/bg.png" alt="bg" id="bg">
-        <img src="../img/tuanSign.png" alt="tuanSign" id="tuanSign">
-        <img src="../img/activityMark.png" alt="activityMark" id="activityMark">
+        <img src="__PUBLIC__/img/bg.png" alt="bg" id="bg">
+        <img src="__PUBLIC__/img/tuanSign.png" alt="tuanSign" id="tuanSign">
+        <img src="__PUBLIC__/img/activityMark.png" alt="activityMark" id="activityMark">
         <div id="menu">
         	<div class="box">
         	    <div id="iSign" class="a">
@@ -25,16 +25,20 @@
         </div>
         <div id="foot">&#64;共青团重庆市委</div>
         <script type="text/javascript">
-        	
-        	var iSign = document.querySelector("#iSign");
+            var indexPath = "{:U('Index/index')}";
+            var clickPath = "{:U('Index/clickPage')}";
+            var morePath = "{:U('Index/more')}";
+            var publicPath = "__PUBLIC__";
+
+            var iSign = document.querySelector("#iSign");
         	var moreDet = document.querySelector("#moreDet");
 
         	iSign.addEventListener('click', function () {
-        		window.location.href = "clickPage.html";
+        		window.location.href = "{:U('Index/clickPage')}";
         	});
 
         	moreDet.addEventListener('click', function () {
-        		window.location.href = "more.html"
+        		window.location.href = "{:U('Index/more')}"
         	});
         </script>
     </body>

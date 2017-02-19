@@ -14,6 +14,18 @@ class IndexController extends Controller {
         $this->assign('appid', $this->appid);
         $this->display();
     }
+    public function clickPage() {
+        $signature = $this->JSSDKSignature();
+        $this->assign('signature', $signature);
+        $this->assign('appid', $this->appid);
+        $this->display();
+    }
+    public function more() {
+        $signature = $this->JSSDKSignature();
+        $this->assign('signature', $signature);
+        $this->assign('appid', $this->appid);
+        $this->display();
+    }
 
     public function order() {
         $input = I('post.');
