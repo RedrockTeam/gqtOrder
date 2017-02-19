@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:23:08
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 19:49:45
+* @Last Modified time: 2017-02-19 19:55:17
 */
 
 'use strict';
@@ -147,7 +147,6 @@ function confirmSubmit () {
 		if (user.company && user.name && user.position && user.phone && checkArray !== []) {
 			user.select = checkArray;
 			console.log(user);
-			checkArray = [];
 			$.ajax({
 				type: "POST",
 				data: user,
