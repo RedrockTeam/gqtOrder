@@ -89,6 +89,7 @@ class IndexController extends Controller {
         $current = $current >= 0 ? $current: 0;
         $table = M('records');
         $count = $table->count();
+        $current = $current == 0 ? $count - $current: $current;
         $data = $table->order('id desc')->limit($count - $current)->field('company, select, datetime')->select();
         foreach ($data as &$v) {
             $v['select'] = json_decode($v['select']);
