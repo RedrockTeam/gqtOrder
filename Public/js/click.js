@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:23:08
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 21:27:43
+* @Last Modified time: 2017-02-19 22:31:08
 */
 
 'use strict';
@@ -17,6 +17,7 @@ function $$ (dom) {
 
 var checkArray = [];
 var flag = 0;
+var checkCount = 0;
 
 function clickMore() {
 	var moreAll = $$(".more");
@@ -47,21 +48,21 @@ function alertYou (state) {
 		case 1: {
 			stateImg.src = publicPath + "/img/wrong.png";
 			lineOne.innerHTML = "对不起";
-			lineTwo.innerHTML = "您还未进行勾选。";
+			lineTwo.innerHTML = "您还未进行勾选";
 			flag = 0;
 			break;
 		}
 		case 2: {
 			stateImg.src = publicPath + "/img/wrong.png";
 			lineOne.innerHTML = "住手";
-			lineTwo.innerHTML = "您已经选满3项了。";
+			lineTwo.innerHTML = "您已经选满3项了";
 			flag = 0;
 			break;
 		}
 		case 3: {
 			stateImg.src = publicPath + "/img/wrong.png";
-			lineOne.innerHTML = "温馨提示：";
-			lineTwo.innerHTML = "亲，信息不能为空哟~。";
+			lineOne.innerHTML = "温馨提示:";
+			lineTwo.innerHTML = "亲，信息不能为空哟~";
 			flag = 0;
 			break;
 		}
@@ -75,7 +76,7 @@ function alertYou (state) {
 		case 5: {
 			stateImg.src = publicPath + "/img/wrong.png";
 			lineOne.innerHTML = "对不起";
-			lineTwo.innerHTML = "请检查一下您的个人信息是否正确。";
+			lineTwo.innerHTML = "请检查一下您的个人信息是否正确";
 			flag = 0;
 			break;
 		}
@@ -84,6 +85,24 @@ function alertYou (state) {
 
 	alertBox.style.display = "block";
 
+}
+
+function judge () {
+	var checkBoxAll = $$(".checkBoxA");
+	var checkAll = $$("input[type=checkbox]");
+	for (var i = 0; i <checkBoxAll.length; i ++) {
+		(function (j) {
+			checkBoxAll[j].addEventListener('click', function () {
+				checkCount++;
+				console.log(checkCount);
+				if (checkCount == 8) {
+					alertYou(2);
+					checkCount = 6;
+					checkAll[j].checked = false;
+				}
+			});
+		})(i);
+	}
 }
 
 function clickAll () {
@@ -132,10 +151,6 @@ function confirmSubmit () {
 					user.name = myInput[i].value;
 					break;
 				}
-				case ("post"): {
-					user.position = myInput[i].value;
-					break;
-				}
 				case ("phone"): {
 					user.phone = myInput[i].value;
 					break;
@@ -144,7 +159,7 @@ function confirmSubmit () {
 			}
 		} 
 		
-		if (user.company && user.name && user.position && user.phone && checkArray !== []) {
+		if (user.company && user.name && user.phone && checkArray !== []) {
 			user.select = checkArray;
 			console.log(user);
 			$.ajax({
@@ -172,9 +187,12 @@ function confirmSubmit () {
 
 function start () {
 	
+	checkCount = 0;
+
 	clickAll();
 	confirmSubmit();
 	clickMore();
+	judge();
 
 	mark("#stateYes").addEventListener('click', function () {
 		console.log(flag);
