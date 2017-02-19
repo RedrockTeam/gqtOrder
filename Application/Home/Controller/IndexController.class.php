@@ -34,21 +34,44 @@ class IndexController extends Controller {
         $name = $input['name'];
         $phone = $input['phone'];
         header('Access-Control-Allow-Origin: *');
-        if (empty($company)
-            || $phone == ''
+        if (empty($company)) {
+            $this->ajaxReturn(
+                array(
+                    'status' => 400,
+                    'info'   => '单位名称不能为空'
+                )
+            );
+        }
+
+        if ($phone == ''
             || strlen($phone) != 11
-            || !is_numeric($phone)
-            || $name == ''
-            || !is_array($select)
+            || !is_numeric($phone)) {
+            $this->ajaxReturn(
+                array(
+                    'status' => 400,
+                    'info'   => '手机号码有误'
+                )
+            );
+        }
+        if ($name == '') {
+            $this->ajaxReturn(
+                array(
+                    'status' => 400,
+                    'info'   => '姓名有误'
+                )
+            );
+        }
+        if (!is_array($select)
             || count($select) > 3
             || count($select) == 0) {
             $this->ajaxReturn(
                 array(
                     'status' => 400,
-                    'info'   => '参数错误'
+                    'info'   => '点单数量有误'
                 )
             );
         }
+
         $table = M('records');
         $count = $table->where(array('company' => $company))->count();
         $data = array(
