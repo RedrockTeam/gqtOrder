@@ -38,7 +38,7 @@ class IndexController extends Controller {
             $this->ajaxReturn(
                 array(
                     'status' => 400,
-                    'info'   => '单位名称不能为空'
+                    'info'   => '单位名称有误'
                 )
             );
         }
