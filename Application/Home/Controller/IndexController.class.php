@@ -86,12 +86,16 @@ class IndexController extends Controller {
 
     public function orderList() {
         $current = I('post.current');
-        $current = $current >= 0? $current: 0;
+        $current = $current >= 0 ? $current: 0;
         $table = M('records');
         $count = $table->count();
-        $data = $table->order('id desc')->limit($count-$current, 100)->field('company, select, datetime')->select();
-        foreach ($data as &$v) {
-            $v['select'] = json_decode($v['select']);
+        $current = $current == 0 ? $count: $count - $current;
+        $data = array();
+        if ($current != 0) {
+            $data = $table->order('id desc')->limit($current)->field('company, select, datetime')->select();
+            foreach ($data as &$v) {
+                $v['select'] = json_decode($v['select']);
+            }
         }
         header('Access-Control-Allow-Origin: *');
         $this->ajaxReturn(
