@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:22:47
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 20:55:44
+* @Last Modified time: 2017-02-19 21:37:59
 */
 html, body, div, img, span, p,input {
 	margin: 0;
@@ -170,6 +170,7 @@ input[type=checkbox] {
 	position: relative;
 	margin-left: 3rem;
 	margin-top: 0.4rem;
+	margin-bottom: 0.5rem;s
 	transition: box-shadow 0.5s;
 }
 #clickYes:active {
