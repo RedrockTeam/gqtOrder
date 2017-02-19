@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:23:08
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 15:21:29
+* @Last Modified time: 2017-02-19 19:13:44
 */
 
 'use strict';
@@ -47,7 +47,7 @@ function alertYou (state) {
 		case 1: {
 			stateImg.src = publicPath + "/img/wrong.png";
 			lineOne.innerHTML = "对不起";
-			lineTwo.innerHTML = "您还未选满3项";
+			lineTwo.innerHTML = "您还未进行勾选";
 			flag = 0;
 			break;
 		}
@@ -95,7 +95,7 @@ function clickAll () {
 			}
 		}
 
-		if (checkArray.length < 3) {
+		if (checkArray.length == 0) {
 			alertYou(1);
 		} else if (checkArray.length >3) {
 			alertYou(2);

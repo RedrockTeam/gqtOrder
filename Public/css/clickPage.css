@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:22:47
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 15:32:25
+* @Last Modified time: 2017-02-19 19:19:00
 */
 html, body, div, img, span, p,input {
 	margin: 0;
@@ -251,6 +251,7 @@ input[type=checkbox] {
 	background: #ffffd9;
 	height: 0.8rem;
 	width: 5rem;
+	font-size: 0.4rem;
 	position: relative;
 	margin-top: 0.1rem;
 	margin-left: 0.5rem;
@@ -382,4 +383,7 @@ input[type=checkbox] {
 	text-align: center;
 	color: #723f2d;
 	z-index: 6;
+}
+#foot span {
+	font-size: 0.5rem;
 }
