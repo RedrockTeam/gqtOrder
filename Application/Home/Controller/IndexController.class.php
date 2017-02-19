@@ -22,6 +22,7 @@ class IndexController extends Controller {
         $name = $input['name'];
         $phone = $input['phone'];
         $position = $input['position'];
+        header('Access-Control-Allow-Origin: *');
         if (empty($company)
             || $phone == ''
             || strlen($phone) != 11
@@ -62,7 +63,6 @@ class IndexController extends Controller {
                 )
             );
         }
-        header('Access-Control-Allow-Origin: *');
         $this->ajaxReturn(
             array(
                 'status' => 200,
