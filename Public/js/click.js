@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:23:08
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 23:25:48
+* @Last Modified time: 2017-02-20 00:27:43
 */
 
 'use strict';
@@ -37,7 +37,7 @@ function clickMore() {
 	}
 }
 
-function alertYou (state) {
+function alertYou (state, text) {
 	
 	var alertBox = mark("#alertBox");
 	var stateImg = mark("#stateImg");
@@ -50,7 +50,7 @@ function alertYou (state) {
 			mark(".lineOne").style.display = "block";
 			mark(".lineTwo").style.marginTop = "0";
 			lineOne.innerHTML = "对不起";
-			lineTwo.innerHTML = "你还未进行勾选";
+			lineTwo.innerHTML = "您还未进行勾选";
 			flag = 0;
 			break;
 		}
@@ -59,7 +59,7 @@ function alertYou (state) {
 			lineOne.innerHTML = "住手";
 			mark(".lineOne").style.display = "block";
 			mark(".lineTwo").style.marginTop = "0";
-			lineTwo.innerHTML = "你已经选满3项了";
+			lineTwo.innerHTML = "您已经选满3项了";
 			flag = 0;
 			break;
 		}
@@ -85,7 +85,7 @@ function alertYou (state) {
 			lineOne.innerHTML = "对不起";
 			mark(".lineOne").style.display = "block";
 			mark(".lineTwo").style.marginTop = "0";
-			lineTwo.innerHTML = "请检查一下你的个人信息是否正确";
+			lineTwo.innerHTML = text;
 			flag = 0;
 			break;
 		}
@@ -142,7 +142,7 @@ function clickAll () {
 
 		for(var i = 0; i < allCheck.length; i ++) {
 			if (allCheck[i].checked) {
-				checkArray.push(parseInt(allCheck[i].value));
+				checkArray.push(allCheck[i].value);
 			}
 		}
 
@@ -195,7 +195,7 @@ function confirmSubmit () {
 					if (data.status == 200) {
 						alertYou(4);
 					} else {
-						alertYou(5);
+						alertYou(5, data.info);
 					}
 					console.log(data);
 				},
