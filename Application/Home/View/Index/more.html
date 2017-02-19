@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <script src="__PUBLIC__/js/flexible.js"></script>
         <script src="__PUBLIC__/js/ajax.js"></script>
+        <title>团团邀你来点单</title>
         <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/more.css">
     </head>
     <body>
@@ -35,7 +36,7 @@
         var morePath = "{:U('Index/more')}";
         var publicPath = "__PUBLIC__";
     </script>
-    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script>
         wx.config({
             debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
@@ -52,9 +53,9 @@
         });
         wx.ready(function(){
             wx.onMenuShareTimeline({
-                title: '【@重邮缘】“11.11” 来了，听说你还单着呢！没关系，这里有......', // 分享标题
-                link: "http://mp.weixin.qq.com/s?__biz=MjM5NDAzNDM2MQ==&mid=401028673&idx=1&sn=be047c29e501192df9432b224ff59044#rd",
-                imgUrl: "http://hongyan.cqupt.edu.cn/cquptluck/Public/images/index/share.jpg",
+                title: '团团邀你来点单', // 分享标题
+                link: "{$signature['url']}",
+//                    imgUrl: "http://hongyan.cqupt.edu.cn/cquptluck/Public/images/index/share.jpg",
                 success: function () {
                     alert('分享成功!');// 用户确认分享后执行的回调函数
                 },
@@ -63,10 +64,10 @@
                 }
             });
             wx.onMenuShareAppMessage({
-                title: '【@重邮缘】“11.11” 来了，听说你还单着呢！没关系，这里有......', // 分享标题
-                desc: '【@重邮缘】“11.11” 来了，听说你还单着呢！没关系，这里有......', // 分享描述
-                link: "http://mp.weixin.qq.com/s?__biz=MjM5NDAzNDM2MQ==&mid=401028673&idx=1&sn=be047c29e501192df9432b224ff59044#rd",
-                imgUrl: 'http://hongyan.cqupt.edu.cn/cquptluck/Public/images/index/share.jpg', // 分享图标
+                title: '团团邀你来点单', // 分享标题
+                desc: '2017重庆共青团重点改革项目', // 分享描述
+                link: "{$signature['url']}",
+//                imgUrl: 'http://hongyan.cqupt.edu.cn/cquptluck/Public/images/index/share.jpg', // 分享图标
                 type: '', // 分享类型,music、video或link，不填默认为link
                 dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
                 success: function () {
@@ -77,10 +78,10 @@
                 }
             });
             wx.onMenuShareQQ({
-                title: '【@重邮缘】“11.11” 来了，听说你还单着呢！没关系，这里有......', // 分享标题
-                desc: '【@重邮缘】“11.11” 来了，听说你还单着呢！没关系，这里有......', // 分享描述
-                link: "http://mp.weixin.qq.com/s?__biz=MjM5NDAzNDM2MQ==&mid=401028673&idx=1&sn=be047c29e501192df9432b224ff59044#rd",
-                imgUrl: 'http://hongyan.cqupt.edu.cn/cquptluck/Public/images/index/share.jpg', // 分享图标
+                title: '团团邀你来点单', // 分享标题
+                desc: '2017重庆共青团重点改革项目', // 分享描述
+                link: "{$signature['url']}",
+//                imgUrl: 'http://hongyan.cqupt.edu.cn/cquptluck/Public/images/index/share.jpg', // 分享图标
                 success: function () {
                     alert('分享成功!');// 用户确认分享后执行的回调函数
                 },
