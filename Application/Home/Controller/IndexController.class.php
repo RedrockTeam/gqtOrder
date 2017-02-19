@@ -33,13 +33,11 @@ class IndexController extends Controller {
         $select = $input['select'];
         $name = $input['name'];
         $phone = $input['phone'];
-        $position = $input['position'];
         header('Access-Control-Allow-Origin: *');
         if (empty($company)
             || $phone == ''
             || strlen($phone) != 11
             || !is_numeric($phone)
-            || $position == ''
             || $name == ''
             || !is_array($select)
             || count($select) > 3
@@ -58,7 +56,7 @@ class IndexController extends Controller {
             'select'  => json_encode($select),
             'phone'  => $phone,
             'name'  => $name,
-            'position'  => $position,
+            'position'  => '',
             'datetime' => date('Y-m-d H:i:s', time())
         );
         if ($count != 0) {
