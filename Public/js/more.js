@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-19 02:59:06
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-20 00:28:17
+* @Last Modified time: 2017-02-20 02:11:13
 */
 
 'use strict';
@@ -74,6 +74,12 @@ function getInfo () {
 				showDet();
 			}
 			length.current += data.length;
+			if (length.current >= 10) {
+			   mark("#insideB").style.display = "block";
+		       mark("#insideF").style.display = "block";
+		       mark("#warpB").style.display = "none";
+		       mark("#warpF").style.display = "none";
+			}
 		},
 		error: function (data) {
 			console.log("er");
@@ -84,13 +90,17 @@ function getInfo () {
 
 function page() {
 	var close = mark("#close");
-	var back = mark("#back");
+	var backOne = mark("#warpB");
+	var backTwo = mark("#insideB");
 
 	close.addEventListener('click', function () {
 		mark("#alertBox").style.display = "none";
 	});
 
-	back.addEventListener('click', function () {
+	backOne.addEventListener('click', function () {
+		window.location.href = indexPath;
+	});
+	backTwo.addEventListener('click', function () {
 		window.location.href = indexPath;
 	});
 };
