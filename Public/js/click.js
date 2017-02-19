@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:23:08
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 19:13:44
+* @Last Modified time: 2017-02-19 19:49:45
 */
 
 'use strict';
@@ -70,6 +70,13 @@ function alertYou (state) {
 			lineOne.innerHTML = "点单成功！";
 			lineTwo.innerHTML = "撸起袖子加油干吧！";
 			flag = 1;
+			break;
+		}
+		case 5: {
+			stateImg.src = publicPath + "/img/wrong.png";
+			lineOne.innerHTML = "对不起";
+			lineTwo.innerHTML = "请检查一下您的个人信息是否正确";
+			flag = 0;
 			break;
 		}
 		default: break;
@@ -146,7 +153,11 @@ function confirmSubmit () {
 				data: user,
 				url: "http://hongyan.cqupt.edu.cn/gqtOrder/Home/Index/order",
 				success: function (data) {
-					alertYou(4);
+					if (data.status == 200) {
+						alertYou(4);
+					} else {
+						alertYou(5);
+					}
 					console.log(data);
 				},
 				error: function (data) {
