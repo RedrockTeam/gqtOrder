@@ -50,7 +50,7 @@ function alertYou (state, text) {
 			mark(".lineOne").style.display = "block";
 			mark(".lineTwo").style.marginTop = "0";
 			lineOne.innerHTML = "对不起";
-			lineTwo.innerHTML = "您还未进行勾选";
+			lineTwo.innerHTML = "你还未进行勾选";
 			flag = 0;
 			break;
 		}
@@ -59,7 +59,7 @@ function alertYou (state, text) {
 			lineOne.innerHTML = "住手";
 			mark(".lineOne").style.display = "block";
 			mark(".lineTwo").style.marginTop = "0";
-			lineTwo.innerHTML = "您已经选满3项了";
+			lineTwo.innerHTML = "你已经选满3项了";
 			flag = 0;
 			break;
 		}
