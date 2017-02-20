@@ -24,6 +24,10 @@
         	    </div>
         	</div>
         </div>
+        <div id="bigBoss">
+            <img src="__PUBLIC__/img/bigBoss.png" id="bigA">
+            <img src="__PUBLIC__/img/bigButton.png" id="bigB">
+        </div>
         <div id="foot"><span> ©</span>共青团重庆市委</div>
         <script type="text/javascript">
             var indexPath = "{:U('Index/index')}";
@@ -32,15 +36,22 @@
             var publicPath = "__PUBLIC__";
 
             var iSign = document.querySelector("#iSign");
-        	var moreDet = document.querySelector("#moreDet");
+            var moreDet = document.querySelector("#moreDet");
+            var menu = document.querySelector("#menu");
+            var bigB = document.querySelector("#bigB");
+            var bigBoss = document.querySelector("#bigBoss");
 
-        	iSign.addEventListener('click', function () {
-        		window.location.href = "{:U('Index/clickPage')}";
-        	});
+            iSign.addEventListener('click', function () {
+                window.location.href = "{:U('Index/clickPage')}";
+            });
 
-        	moreDet.addEventListener('click', function () {
-        		window.location.href = "{:U('Index/more')}"
-        	});
+            moreDet.addEventListener('click', function () {
+                window.location.href = "{:U('Index/more')}"
+            });
+
+            bigB.addEventListener('click', function () {
+                menu.style.display = "block";
+                bigBoss.style.display = "none";
         </script>
         <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
         <script>
