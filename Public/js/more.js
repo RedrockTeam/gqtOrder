@@ -58,7 +58,7 @@ function addPost (data) {
 function addDet (se) {
 	var a = document.createElement("div");
 	a.className = "list";
-	a.innerHTML = "<span>" + se + "、</span>" + det[parseInt(se) - 1];
+	a.innerHTML = "<span>" + se + "、</span>" + det[parseInt(se) - 1] + '。';
 	mark("#yourList").appendChild(a);
 }
 
