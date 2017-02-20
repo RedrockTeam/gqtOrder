@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:22:47
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-19 23:26:16
+* @Last Modified time: 2017-02-20 19:09:07
 */
 html, body, div, img, span, p,input {
 	margin: 0;
@@ -32,7 +32,7 @@ input[type=checkbox] {
 	line-height: 0.875rem;
 	color: #723f2d;
 	font-weight: 700;
-	font-size: 0.35rem;
+	margin-top: 0.3rem;
 	vertical-align: middle;
 	text-align: center;
 }
@@ -49,19 +49,20 @@ input[type=checkbox] {
 	margin-top: 0.2rem;
 }
 .clickNum {
-	width: 1.4rem;
+	width: 0.8rem;
 	height: 0.875rem;
 	position: relative;
 	float: left;
 }
 .clickProject {
-	width: 7rem;
+	width: 7.8rem;
 	height: 0.875rem;
+	font-size: 0.4rem;
 	position: relative;
 	float: left;
 }
 .clickJoin {
-	width: 1.6rem;
+	width: 1.4rem;
 	height: 0.875rem;
 	position: relative;
 	float: left;
@@ -132,13 +133,13 @@ input[type=checkbox] {
 	margin-bottom: 0.6rem;
 	margin-left: 5%;
 	transition: height 0.5s;
-	font-size: 0.35rem;
+	font-size: 0.4rem;
 	line-height: 0.6rem;
 	text-overflow: ellipsis;
 }
 .projectDet span {
 	font-weight: 700;
-	font-size: 0.35rem;
+	font-size: 0.4rem;
 	display: inline-block;
 	line-height: 0.6rem;
 }
