@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 13:09:05
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-21 00:25:31
+* @Last Modified time: 2017-02-21 01:00:34
 */
 html, body, div, img {
 	margin: 0;
@@ -31,7 +31,7 @@ a {
 }
 #activityMark {
 	width: 8.96rem;
-	height: 8.96rem;
+	height: 6.4rem;
 	z-index: 2;
 	position: absolute;
 	top: 1.375rem;
@@ -39,7 +39,7 @@ a {
 	animation: boom 1s;
 }
 @-webkit-keyframes boom {
-0%{-webkit-transform: translate(0,-10rem);}
+0%{-webkit-transform: translate(0,-8rem);}
 20%{-webkit-transform: translate(0,0);}
 30%{-webkit-transform: rotateZ(10deg);}
 40%{-webkit-transform: rotateZ(-10deg);}
