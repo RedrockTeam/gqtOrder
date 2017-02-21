@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 22:22:47
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-21 13:12:30
+* @Last Modified time: 2017-02-21 13:35:39
 */
 html, body, div, img, span, p,input {
 	margin: 0;
@@ -42,6 +42,9 @@ input[type=checkbox] {
 }
 #mustDet p {
 	text-indent: 2em;
+}
+#mustDet p span {
+	color: #fa7851;
 }
 #clickBox {
 	position: relative;
