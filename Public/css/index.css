@@ -2,7 +2,7 @@
 * @Author: 10261
 * @Date:   2017-02-18 13:09:05
 * @Last Modified by:   10261
-* @Last Modified time: 2017-02-21 02:38:44
+* @Last Modified time: 2017-02-21 13:02:59
 */
 html, body, div, img {
 	margin: 0;
@@ -79,7 +79,7 @@ a {
 	height: 1.9rem;
 	position: absolute;
 	bottom: -0.2rem;
-	right: 1.2rem;
+	right: 1rem;
 }
 .a {
 	width: 4.7rem;
