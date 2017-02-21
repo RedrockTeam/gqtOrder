@@ -5,7 +5,7 @@
         <script type="text/javascript" src="__PUBLIC__/js/flexible.js"></script>
         <script type="text/javascript" src="__PUBLIC__/js/jquery-3.1.1.min.js"></script>
 		<title>团团邀你来点单</title>
-		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/clickPage.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/clickPage.css?v={:time()}">
     </head>
     <body>
         <div id="mustBox">
@@ -407,8 +407,7 @@
         	var morePath = "{:U('Index/more')}";
         	var publicPath = "__PUBLIC__";
 		</script>
-    	<script type="text/javascript" src="__PUBLIC__/js/click.js"></script>
-		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    	<script type="text/javascript" src="__PUBLIC__/js/click.js?v={:time()}"></script>
 		<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 		<script>
             wx.config({
